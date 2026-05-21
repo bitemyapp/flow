@@ -1,12 +1,12 @@
 [package]
-name = "connector-init"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "connector-init"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [[bin]]
 name = "flow-connector-init"
@@ -18,8 +18,8 @@ ops = { path = "../ops" }
 proto-flow = { path = "../proto-flow" }
 proto-grpc = { path = "../proto-grpc", features = ["capture_server", "derive_server", "materialize_server", "flow_server"] }
 
-async-trait = { workspace = true }
 anyhow = { workspace = true }
+async-trait = { workspace = true }
 bytes = { workspace = true }
 clap = { workspace = true }
 futures = { workspace = true }

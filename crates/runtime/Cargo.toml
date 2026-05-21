@@ -1,12 +1,12 @@
 [package]
-name = "runtime"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "runtime"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [dependencies]
 assemble = { path = "../assemble" }
@@ -26,28 +26,20 @@ models = { path = "../models" }
 ops = { path = "../ops" }
 proto-flow = { path = "../proto-flow" }
 proto-gazette = { path = "../proto-gazette" }
-proto-grpc = { path = "../proto-grpc", features = [
-    "capture_client",
-    "capture_server",
-    "derive_client",
-    "derive_server",
-    "materialize_client",
-    "materialize_server",
-    "runtime_server",
-] }
+proto-grpc = { path = "../proto-grpc", features = ["capture_client", "capture_server", "derive_client", "derive_server", "materialize_client", "materialize_server", "runtime_server"] }
 simd-doc = { path = "../simd-doc" }
 tables = { path = "../tables" }
 tuple = { path = "../tuple" }
 unseal = { path = "../unseal" }
 
 anyhow = { workspace = true }
-handlebars = { workspace = true }
 aws-config = { workspace = true }
-aws-sdk-sts = { workspace = true }
 aws-credential-types = { workspace = true }
+aws-sdk-sts = { workspace = true }
 bytes = { workspace = true }
 clap = { workspace = true }
 futures = { workspace = true }
+handlebars = { workspace = true }
 json-patch = { workspace = true }
 jsonwebtoken = { workspace = true }
 librocksdb-sys = { workspace = true }

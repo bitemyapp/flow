@@ -1,12 +1,12 @@
 [package]
-name = "validation"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "validation"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [dependencies]
 assemble = { path = "../assemble" }

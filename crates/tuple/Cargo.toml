@@ -1,15 +1,15 @@
 [package]
-name = "tuple"
-version.workspace = true
-rust-version.workspace = true
 edition.workspace = true
 homepage.workspace = true
+name = "tuple"
 repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 authors = [
-"Benjamin Fry <benjaminfry@me.com>",
-"Vincent Rouillé <vincent@clikengo.com>",
-"Estuary Technologies, Inc <johnny@estuary.dev>",
+  "Benjamin Fry <benjaminfry@me.com>",
+  "Vincent Rouillé <vincent@clikengo.com>",
+  "Estuary Technologies, Inc <johnny@estuary.dev>",
 ]
 license = "MIT OR Apache-2.0"
 

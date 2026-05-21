@@ -1,27 +1,27 @@
 [package]
-name = "models"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "models"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [dependencies]
 # NOTE(johnny): DO NOT add proto-flow or proto-gazette to this crate.
 
 anyhow = { workspace = true }
-handlebars = { workspace = true }
 async-graphql = { workspace = true, optional = true }
 base64 = { workspace = true }
 bytes = { workspace = true }
-futures = { workspace = true, optional = true }
-indexmap = { workspace = true, optional = true }
-itertools = { workspace = true }
 caseless = { workspace = true }
 chrono = { workspace = true }
+futures = { workspace = true, optional = true }
+handlebars = { workspace = true }
 humantime-serde = { workspace = true }
+indexmap = { workspace = true, optional = true }
+itertools = { workspace = true }
 lazy_static = { workspace = true }
 regex = { workspace = true }
 schemars = { workspace = true }
@@ -43,5 +43,5 @@ serde_yaml = { workspace = true }
 [features]
 default = []
 
-sqlx-support = ["sqlx"]
 async-graphql = ["dep:async-graphql", "dep:futures", "dep:indexmap"]
+sqlx-support = ["sqlx"]

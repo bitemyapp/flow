@@ -1,12 +1,12 @@
 [package]
-name = "control-plane-api"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "control-plane-api"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [dependencies]
 activate = { path = "../activate" }

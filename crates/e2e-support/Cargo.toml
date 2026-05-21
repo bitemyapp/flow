@@ -1,12 +1,12 @@
 [package]
-name = "e2e-support"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "e2e-support"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [dependencies]
 async-process = { path = "../async-process" }

@@ -1,12 +1,12 @@
 [package]
-name = "proto-flow"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "proto-flow"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [dependencies]
 proto-gazette = { path = "../proto-gazette" }
@@ -27,8 +27,8 @@ prost-build = { workspace = true, optional = true }
 regex = { workspace = true, optional = true }
 
 [dev-dependencies]
-insta = { workspace = true }
 hexdump = { workspace = true }
+insta = { workspace = true }
 
 [features]
 default = []

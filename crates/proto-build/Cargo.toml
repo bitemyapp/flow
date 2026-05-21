@@ -1,9 +1,9 @@
 [package]
-name = "proto-build"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "proto-build"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true

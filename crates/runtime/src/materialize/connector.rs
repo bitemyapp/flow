@@ -111,11 +111,13 @@ pub async fn start<L: LogHandler>(
         ),
     };
 
-    // Send an initial Spec request which may direct us to perform an IAM token exchange.
+    // Send an initial Spec request. Materialization connectors like
+    // materialize-postgres validate endpoint auth during Spec, so they must
+    // receive the real endpoint config rather than an empty placeholder.
     connector_tx
         .try_send(Request {
             spec: Some(proto_flow::materialize::request::Spec {
-                config_json: "{}".into(),
+                config_json: config_json.clone(),
                 connector_type: connector_type,
             }),
             ..Default::default()

@@ -2,11 +2,11 @@
 name = "flow-web"
 
 # wasm-pack isn't yet fully compatible with workspace inheritance, so we can't use that for these fields
-version = "0.6.1"
 authors = ["Estuary developers  <engineering@estuary.dev>"]
 edition = "2021"
 license = "BSL"
 rust-version = "1.65"
+version = "0.6.1"
 
 
 [lib]
@@ -36,12 +36,12 @@ proto-flow = { path = "../proto-flow" }
 tables = { path = "../tables" }
 validation = { path = "../validation" }
 
-url = { workspace = true }
-thiserror = { workspace = true }
-wasm-bindgen = { workspace = true }
 serde = { workspace = true }
-serde_json = { workspace = true }
 serde-wasm-bindgen = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+url = { workspace = true }
+wasm-bindgen = { workspace = true }
 
 
 # These are optional, since they both have significant impact on the size of the module.
@@ -52,7 +52,7 @@ console_error_panic_hook = { workspace = true, optional = true }
 # this is not a workspace dependency because it's only a transitive dependency, and it's only included here
 # because we need to enable the "js" feature when building for wasm
 [target.wasm32-unknown-unknown.dependencies]
-getrandom = { version = "0.2", features = ["js"]}
+getrandom = { version = "0.2", features = ["js"] }
 
 [dev-dependencies]
 wasm-bindgen-test = { workspace = true }

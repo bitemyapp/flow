@@ -1,16 +1,16 @@
 [package]
+edition = "2024"
 name = "config-encryption"
 version = "0.1.0"
-edition = "2024"
 
 [[bin]]
 name = "flow-config-encryption"
 path = "src/main.rs"
 
 [dependencies]
+async-process = { path = "../async-process" }
 doc = { path = "../doc" }
 json = { path = "../json" }
-async-process = { path = "../async-process" }
 
 aide = { workspace = true }
 anyhow = { workspace = true }

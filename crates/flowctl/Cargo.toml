@@ -2,13 +2,13 @@
 name = "flowctl"
 # The version here is ignored for release builds. During releases, this is instead set by the env
 # variable FLOW_VERSION, based on the git tag.
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [dependencies]
 activate = { path = "../activate" }
@@ -29,10 +29,7 @@ models = { path = "../models" }
 ops = { path = "../ops" }
 proto-flow = { path = "../proto-flow" }
 proto-gazette = { path = "../proto-gazette" }
-proto-grpc = { path = "../proto-grpc", features = [
-    "capture_client",
-    "shuffle_client",
-] }
+proto-grpc = { path = "../proto-grpc", features = ["capture_client", "shuffle_client"] }
 publisher = { path = "../publisher" }
 runtime = { path = "../runtime" }
 runtime-next = { path = "../runtime-next" }
@@ -84,5 +81,5 @@ uuid = { workspace = true }
 
 [dev-dependencies]
 assert_cmd = { workspace = true }
-tempfile = { workspace = true }
 insta = { workspace = true }
+tempfile = { workspace = true }

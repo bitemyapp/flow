@@ -1,12 +1,12 @@
 [package]
-name = "json"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "json"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [dependencies]
 addr = { workspace = true }
@@ -30,9 +30,9 @@ glob = { workspace = true }
 insta = { workspace = true }
 
 [[bench]]
-name = "github_events"
 harness = false
+name = "github_events"
 
 [[bench]]
-name = "citi_rides"
 harness = false
+name = "citi_rides"

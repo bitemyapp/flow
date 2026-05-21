@@ -350,12 +350,7 @@ pub struct Guard {
 }
 
 fn unique_container_name() -> String {
-    let n = std::time::SystemTime::now()
-        .duration_since(std::time::UNIX_EPOCH)
-        .unwrap()
-        .as_nanos();
-
-    format!("fc_{:x}", n as u32)
+    format!("fc_{}", uuid::Uuid::new_v4().simple())
 }
 
 fn docker_cli() -> String {

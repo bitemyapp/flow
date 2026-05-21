@@ -1,51 +1,29 @@
 [workspace]
-resolver = "2"
 members = ["crates/*"]
+resolver = "2"
 
 [workspace.package]
-version = "0.0.0"
-edition = "2024"
-rust-version = "1.90"
 authors = ["Estuary developers <engineering@estuary.dev>"]
-readme = "./README.md"
+edition = "2024"
 homepage = "https://estuary.dev/"
-repository = "https://github.com/estuary/flow"
 license = "BSL"
+readme = "./README.md"
+repository = "https://github.com/estuary/flow"
+rust-version = "1.90"
+version = "0.0.0"
 
 [workspace.dependencies]
-aes-siv = "0"
 addr = { version = "0", default-features = false, features = ["std"] }
-aide = { version = "0", features = [
-    "axum",
-    "axum-original-uri",
-    "axum-json",
-    "macros",
-    "scalar",
-    "redoc",
-    "axum-extra",
-    "axum-extra-query",
-] }
+aes-siv = "0"
+aide = { version = "0", features = ["axum", "axum-original-uri", "axum-json", "macros", "scalar", "redoc", "axum-extra", "axum-extra-query"] }
 anyhow = "1"
-async-compression = { version = "0", features = [
-    "futures-io",
-    "gzip",
-    "tokio",
-    "zstd",
-] }
-async-stripe = { version = "0", default-features = false, features = [
-    "billing",
-    "checkout",
-    "runtime-tokio-hyper",
-] }
+async-compression = { version = "0", features = ["futures-io", "gzip", "tokio", "zstd"] }
+async-stripe = { version = "0", default-features = false, features = ["billing", "checkout", "runtime-tokio-hyper"] }
 async-trait = "0"
 atty = "0"
 # TODO: Add "xz" feature after next apache-avro release (>0.20.0)
 # Current v0.20.0 has library conflict: xz2->lzma-sys vs zip->liblzma-sys
-apache-avro = { version = "0", default-features = false, features = [
-    "snappy",
-    "zstandard",
-    "bzip",
-] }
+apache-avro = { version = "0", default-features = false, features = ["snappy", "zstandard", "bzip"] }
 
 # For some reason, the version requirement "0" resulted in cargo downgrading
 # this dependency to an incompatible version. The requirement here is intended
@@ -53,10 +31,10 @@ apache-avro = { version = "0", default-features = false, features = [
 base64 = ">= 0.22.1"
 bigdecimal = { version = "0", default-features = false }
 bitvec = "1"
-bytes = "1"
 bumpalo = { version = "3", features = ["collections"] }
 bytelines = "2"
 byteorder = "1"
+bytes = "1"
 caseless = "0"
 chardetng = "0"
 chrono = { version = "0", features = ["serde"] }
@@ -77,40 +55,37 @@ graphql_client = "*"
 handlebars = "6"
 hex = "0"
 hexdump = "0"
+highway = "1"
 humantime = "2"
 humantime-serde = "1"
-itertools = "0"
 indexmap = { version = "1", features = ["serde"] }
-highway = "1"
+indicatif = "0"
 iri-string = "0"
-jemallocator = { version = "0", features = [
-    "profiling",
-    # Allow use of system jemalloc library via JEMALLOC_OVERRIDE env var.
-    "unprefixed_malloc_on_supported_platforms",
-] }
+itertools = "0"
 jemalloc-ctl = "0"
+jemallocator = { version = "0", features = [
+  "profiling",
+  # Allow use of system jemalloc library via JEMALLOC_OVERRIDE env var.
+  "unprefixed_malloc_on_supported_platforms",
+] }
 json-patch = "4"
 jsonwebtoken = { version = "10", features = ["aws_lc_rs"] }
 kafka-protocol = "0.15"
 lazy_static = "1"
 libc = "0"
-librocksdb-sys = { version = "0", default-features = false, features = [
-    "bindgen-runtime",
-    "snappy",
-] }
+librocksdb-sys = { version = "0", default-features = false, features = ["bindgen-runtime", "snappy"] }
 lz4 = "1"
 lz4_flex = "0"
-mime = "0"
+md5 = "0"
 memchr = "2"
 metrics = "0.24"
 metrics-exporter-prometheus = "0.18"
 metrics-util = "0.20"
-prometheus = "0"
-md5 = "0"
+mime = "0"
 num-bigint = "0"
 num-format = "0"
-indicatif = "0"
 open = "3"
+page-turner = "0"
 parquet = { version = "56", features = ["json"] }
 pathfinding = "4"
 pbjson = "0"
@@ -118,134 +93,85 @@ pbjson-types = "0"
 percent-encoding = "2"
 pin-project-lite = "0"
 postgrest = "1"
-page-turner = "0"
+prometheus = "0"
 prost = "0"
 protobuf = "3"
 protobuf-json-mapping = "3"
 protobuf-parse = "3"
 regex = "1"
-reqwest = { version = "0", default-features = false, features = [
-    "json",
-    "rustls-tls",
-    "stream",
-] }
+reqwest = { version = "0", default-features = false, features = ["json", "rustls-tls", "stream"] }
 resend-rs = { version = "0.19" }
-rocksdb = { version = "0", default-features = false, features = [
-    "bindgen-runtime",
-    "rtti",
-    "snappy",
-] }
 rkyv = { version = "0" }
-rsasl = { version = "2", default-features = false, features = [
-    "provider",
-    "config_builder",
-    "scram-sha-1",
-    "scram-sha-2",
-    "oauthbearer",
-    "plain",
-] }
+rocksdb = { version = "0", default-features = false, features = ["bindgen-runtime", "rtti", "snappy"] }
+rsasl = { version = "2", default-features = false, features = ["provider", "config_builder", "scram-sha-1", "scram-sha-2", "oauthbearer", "plain"] }
 rusqlite = { version = "0", features = ["bundled-full"] }
 rustyline = "17"
 schemars = "1"
 serde = { version = "1", features = ["derive"] }
-serde_json = { version = "1", features = ["raw_value", "float_roundtrip"] }
-serde_yaml = "0"
 serde-transcode = "1"
 serde-wasm-bindgen = "0"
+serde_json = { version = "1", features = ["raw_value", "float_roundtrip"] }
+serde_yaml = "0"
 sha2 = "0"
 size = "0"
 socket2 = "0"
+sqlx = { version = "0", features = ["chrono", "ipnetwork", "json", "macros", "postgres", "runtime-tokio-native-tls", "uuid"] }
 strsim = "0"
 strum = { version = "0", features = ["derive"] }
 strum_macros = "0"
 superslice = "1"
-sqlx = { version = "0", features = [
-    "chrono",
-    "ipnetwork",
-    "json",
-    "macros",
-    "postgres",
-    "runtime-tokio-native-tls",
-    "uuid",
-] }
 
-tokio-rustls = "0"
 rustls = { version = "0", features = ["aws_lc_rs"] }
 rustls-pemfile = "2"
-webpki = "0"
-tempfile = "3"
 tempdir = "0"
+tempfile = "3"
 thiserror = "2"
-time = { version = "0", features = [
-    "serde-well-known",
-    "macros",
-    "formatting",
-    "parsing",
-] }
+time = { version = "0", features = ["serde-well-known", "macros", "formatting", "parsing"] }
+tokio-rustls = "0"
+webpki = "0"
 # We CANNOT enable the tokio "process" feature: https://github.com/tokio-rs/tokio/issues/3520
 # Instead, use the async-process crate which encapsulates a work-around.
-tokio = { version = "1", features = [
-    "fs",
-    "io-util",
-    "macros",
-    "net",
-    "rt-multi-thread",
-    "signal",
-    "sync",
-    "time",
-] }
-tokio-util = { version = "0", features = ["io", "compat", "rt"] }
+hyper-util = "0"
+rustls-native-certs = "0"
+tokio = { version = "1", features = ["fs", "io-util", "macros", "net", "rt-multi-thread", "signal", "sync", "time"] }
 tokio-stream = { version = "0" }
+tokio-util = { version = "0", features = ["io", "compat", "rt"] }
 tonic = { version = "0", features = ["tls-native-roots"] }
 tonic-prost = "0"
-hyper-util = "0"
 tower = { version = "0", features = ["util"] }
 tower-http = { version = "0", features = ["cors", "trace"] }
 tracing = "0"
-tracing-subscriber = { version = "0", features = [
-    "time",
-    "json",
-    "env-filter",
-    "fmt",
-] }
 tracing-record-hierarchical = "0"
-rustls-native-certs = "0"
+tracing-subscriber = { version = "0", features = ["time", "json", "env-filter", "fmt"] }
 zeroize = "1"
 
+derivative = "2"
+quickcheck = "1"
+quickcheck_macros = "1"
 unicode-bom = "2"
 unicode-normalization = "0"
 url = { version = "2", features = ["serde"] }
 uuid = { version = "1", features = ["serde"] }
 validator = { version = "0", features = ["derive"] }
-quickcheck = "1"
-quickcheck_macros = "1"
 wasm-bindgen = "0"
 xxhash-rust = { version = "0", features = ["xxh3"] }
 yaml-merge-keys = { version = "0", features = ["serde_yaml"] }
 zip = "4"
 zstd = "0"
-derivative = "2"
 
 # AWS packages
 aws-config = "1"
-aws-types = "1"
 aws-credential-types = "1"
 aws-msk-iam-sasl-signer = "1"
 aws-sdk-sts = "1"
+aws-types = "1"
 
 # Used for the agent http server
-axum = { version = "0", features = ["macros"] }
-axum-server = { version = "0.7.3", features = ["tls-rustls"] }
-axum-extra = { version = "0", features = ["typed-header", "query"] }
-async-graphql = { version = "7", features = [
-    "chrono",
-    "dataloader",
-    "raw_value",
-    "uuid",
-    "url",
-    "graphiql",
-] }
+async-graphql = { version = "7", features = ["chrono", "dataloader", "raw_value", "uuid", "url", "graphiql"] }
 async-graphql-axum = "7"
+axum = { version = "0", features = ["macros"] }
+axum-extra = { version = "0", features = ["typed-header", "query"] }
+axum-server = { version = "0", features = ["tls-rustls"] }
 
 # Used exclusively as dev-dependencies
 assert_cmd = "2"
@@ -255,11 +181,7 @@ insta = { version = "1", features = ["redactions", "json", "yaml"] }
 rand = { version = "0", features = ["small_rng"] }
 rand_distr = { version = "0" }
 rdkafka = "0"
-schema_registry_converter = { version = "4", features = [
-    "easy",
-    "avro",
-    "json",
-] }
+schema_registry_converter = { version = "4", features = ["easy", "avro", "json"] }
 tracing-test = "0"
 wasm-bindgen-test = "0"
 
@@ -273,19 +195,19 @@ tonic-prost-build = "0"
 
 [profile.release]
 debug = "none"
-strip = "debuginfo"
 incremental = false
 lto = "thin"
+strip = "debuginfo"
 
 [profile.dev]
 # We leave `debug` off because it cuts local and CI builds by a third,
 # and it produces a 100x smaller Cargo build cache, which is important
 # for GitHub Actions caching. Use "full" if you want an actual debugger.
 debug = "none"
-strip = "debuginfo"
 incremental = true
 lto = "off"
 opt-level = 1       # Basic optimization. As fast to build as none.
+strip = "debuginfo"
 
 [patch.'crates-io']
 

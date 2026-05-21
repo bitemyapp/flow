@@ -1,12 +1,12 @@
 [package]
-name = "shuffle"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "shuffle"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [dependencies]
 doc = { path = "../doc" }
@@ -18,10 +18,7 @@ models = { path = "../models" }
 ops = { path = "../ops" }
 proto-flow = { path = "../proto-flow" }
 proto-gazette = { path = "../proto-gazette" }
-proto-grpc = { path = "../proto-grpc", features = [
-    "shuffle_client",
-    "shuffle_server",
-] }
+proto-grpc = { path = "../proto-grpc", features = ["shuffle_client", "shuffle_server"] }
 publisher = { path = "../publisher" }
 service-kit = { path = "../service-kit" }
 simd-doc = { path = "../simd-doc" }

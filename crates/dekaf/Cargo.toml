@@ -1,18 +1,19 @@
 
 [package]
-name = "dekaf"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "dekaf"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [dependencies]
 allocator = { path = "../allocator" }
-dekaf-connector = { path = "../dekaf-connector" }
 avro = { path = "../avro" }
+coroutines = { path = "../coroutines" }
+dekaf-connector = { path = "../dekaf-connector" }
 doc = { path = "../doc" }
 extractors = { path = "../extractors" }
 flow-client = { path = "../flow-client" }
@@ -26,11 +27,15 @@ proto-gazette = { path = "../proto-gazette" }
 simd-doc = { path = "../simd-doc" }
 tuple = { path = "../tuple" }
 unseal = { path = "../unseal" }
-coroutines = { path = "../coroutines" }
 
 aes-siv = { workspace = true }
 anyhow = { workspace = true }
+apache-avro = { workspace = true }
 async-trait = { workspace = true }
+aws-config = { workspace = true }
+aws-credential-types = { workspace = true }
+aws-msk-iam-sasl-signer = { workspace = true }
+aws-types = { workspace = true }
 axum = { workspace = true }
 axum-extra = { workspace = true }
 axum-server = { workspace = true }
@@ -64,31 +69,26 @@ schemars = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
 socket2 = { workspace = true }
+thiserror = { workspace = true }
 time = { workspace = true }
 tokio = { workspace = true }
 tokio-rustls = { workspace = true }
-tokio-util = { workspace = true }
 tokio-stream = { workspace = true }
+tokio-util = { workspace = true }
 tonic = { workspace = true }
-tracing-record-hierarchical = { workspace = true }
-aws-config = { workspace = true }
-aws-types = { workspace = true }
-aws-credential-types = { workspace = true }
-aws-msk-iam-sasl-signer = { workspace = true }
 tower-http = { workspace = true }
 tracing = { workspace = true }
+tracing-record-hierarchical = { workspace = true }
 tracing-subscriber = { workspace = true }
 url = { workspace = true }
 webpki = { workspace = true }
-apache-avro = { workspace = true }
-thiserror = { workspace = true }
 
 [dev-dependencies]
 async-process = { path = "../async-process" }
 build = { path = "../build" }
-tables = { path = "../tables" }
 flowctl = { path = "../flowctl" }
 locate-bin = { path = "../locate-bin" }
+tables = { path = "../tables" }
 
 apache-avro = { workspace = true }
 insta = { workspace = true }
@@ -97,6 +97,6 @@ schema_registry_converter = { workspace = true }
 serde_yaml = { workspace = true }
 sqlx = { workspace = true }
 tempfile = { workspace = true }
-url = { workspace = true }
 tracing-test = { workspace = true }
+url = { workspace = true }
 uuid = { workspace = true, features = ["v4"] }

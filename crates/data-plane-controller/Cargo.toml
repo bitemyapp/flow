@@ -1,12 +1,12 @@
 [package]
-name = "data-plane-controller"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "data-plane-controller"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [dependencies]
 async-process = { path = "../async-process" }

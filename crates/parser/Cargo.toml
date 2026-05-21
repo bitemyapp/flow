@@ -1,24 +1,24 @@
 [package]
-name = "parser"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "parser"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [[bin]]
 name = "flow-parser"
 path = "src/main.rs"
 
 [[bench]]
-name = "peoples_500"
 harness = false
+name = "peoples_500"
 
 [dependencies]
-json = { path = "../json" }
 doc = { path = "../doc" }
+json = { path = "../json" }
 
 apache-avro = { workspace = true }
 base64 = { workspace = true }
@@ -26,24 +26,27 @@ bytes = { workspace = true }
 caseless = { workspace = true }
 chardetng = { workspace = true }
 chrono = { workspace = true }
-time = { workspace = true }
+clap = { workspace = true }
 criterion = { workspace = true }
 csv = { workspace = true }
 encoding_rs = { workspace = true }
 flate2 = { workspace = true }
 itertools = { workspace = true }
+lazy_static = { workspace = true }
 mime = { workspace = true }
 num-bigint = { workspace = true }
 parquet = { workspace = true }
 protobuf = { workspace = true }
 protobuf-json-mapping = { workspace = true }
 protobuf-parse = { workspace = true }
+regex = { workspace = true }
 schemars = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
+strum = { workspace = true }
 tempfile = { workspace = true }
-clap = { workspace = true }
 thiserror = { workspace = true }
+time = { workspace = true }
 tracing = { workspace = true }
 tracing-subscriber = { workspace = true }
 unicode-bom = { workspace = true }
@@ -51,12 +54,9 @@ unicode-normalization = { workspace = true }
 url = { workspace = true }
 uuid = { workspace = true }
 zip = { workspace = true }
-strum = { workspace = true }
-lazy_static = { workspace = true }
-regex = { workspace = true }
 zstd = { workspace = true }
 
 [dev-dependencies]
 assert_cmd = { workspace = true }
-tempdir = { workspace = true }
 insta = { workspace = true }
+tempdir = { workspace = true }

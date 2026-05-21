@@ -1,12 +1,12 @@
 [package]
-name = "migrate"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "migrate"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [dependencies]
 activate = { path = "../activate" }
@@ -23,15 +23,15 @@ tables = { path = "../tables" }
 tokens = { path = "../tokens" }
 
 anyhow = { workspace = true }
-itertools = { workspace = true }
-url = { workspace = true }
+chrono = { workspace = true, features = ["serde"] }
 futures = { workspace = true }
+itertools = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
 sqlx = { workspace = true }
 tokio = { workspace = true }
 tracing = { workspace = true }
-chrono = { workspace = true, features = ["serde"] }
+url = { workspace = true }
 
 [dev-dependencies]
 build = { path = "../build" }

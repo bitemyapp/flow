@@ -1,16 +1,16 @@
 [package]
-name = "proto-grpc"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "proto-grpc"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [dependencies]
-proto-gazette = { path = "../proto-gazette" }
 proto-flow = { path = "../proto-flow", optional = true }
+proto-gazette = { path = "../proto-gazette" }
 
 tonic = { workspace = true }
 tonic-prost = { workspace = true }

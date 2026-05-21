@@ -1,12 +1,12 @@
 [package]
-name = "proto-gazette"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "proto-gazette"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [lib]
 # The formatting of the generated code comments changed slightly in prost 0.11,

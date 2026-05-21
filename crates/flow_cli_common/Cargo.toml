@@ -1,16 +1,16 @@
 [package]
-name = "flow_cli_common"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "flow_cli_common"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [dependencies]
 anyhow = { workspace = true }
-clap = { workspace = true }
 atty = { workspace = true }
+clap = { workspace = true }
 tracing = { workspace = true }
 tracing-subscriber = { workspace = true }

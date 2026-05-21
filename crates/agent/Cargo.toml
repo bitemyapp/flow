@@ -1,12 +1,12 @@
 [package]
-name = "agent"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "agent"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
@@ -19,14 +19,13 @@ control-plane-api = { path = "../control-plane-api" }
 coroutines = { path = "../coroutines" }
 dekaf = { path = "../dekaf" }
 doc = { path = "../doc" }
-migrate = { path = "../migrate" }
-notifications = { path = "../notifications" }
 gazette = { path = "../gazette" }
-tokens = { path = "../tokens" }
 json = { path = "../json" }
 labels = { path = "../labels" }
 locate-bin = { path = "../locate-bin" }
+migrate = { path = "../migrate" }
 models = { path = "../models", features = ["async-graphql"] }
+notifications = { path = "../notifications" }
 ops = { path = "../ops" }
 proto-flow = { path = "../proto-flow" }
 proto-gazette = { path = "../proto-gazette" }
@@ -34,6 +33,7 @@ proto-grpc = { path = "../proto-grpc", features = ["runtime_client"] }
 runtime = { path = "../runtime" }
 sources = { path = "../sources" }
 tables = { path = "../tables", features = ["persist"] }
+tokens = { path = "../tokens" }
 validation = { path = "../validation" }
 
 aide = { workspace = true }
