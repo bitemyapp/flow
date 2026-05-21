@@ -1,12 +1,12 @@
 [package]
-name = "runtime-next"
-version.workspace = true
-rust-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 homepage.workspace = true
-repository.workspace = true
 license.workspace = true
+name = "runtime-next"
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [dependencies]
 assemble = { path = "../assemble" }
@@ -26,16 +26,7 @@ models = { path = "../models" }
 ops = { path = "../ops" }
 proto-flow = { path = "../proto-flow" }
 proto-gazette = { path = "../proto-gazette" }
-proto-grpc = { path = "../proto-grpc", features = [
-    "capture_client",
-    "capture_server",
-    "derive_client",
-    "derive_server",
-    "materialize_client",
-    "materialize_server",
-    "runtime_client",
-    "runtime_server",
-] }
+proto-grpc = { path = "../proto-grpc", features = ["capture_client", "capture_server", "derive_client", "derive_server", "materialize_client", "materialize_server", "runtime_client", "runtime_server"] }
 publisher = { path = "../publisher" }
 service-kit = { path = "../service-kit" }
 shuffle = { path = "../shuffle" }
@@ -61,7 +52,6 @@ metrics = { workspace = true }
 pbjson-types = { workspace = true }
 prost = { workspace = true }
 rand = { workspace = true }
-url = { workspace = true }
 reqwest = { workspace = true }
 rocksdb = { workspace = true }
 serde = { workspace = true }
@@ -74,6 +64,7 @@ tokio-stream = { workspace = true }
 tonic = { workspace = true }
 tracing = { workspace = true }
 tracing-subscriber = { workspace = true }
+url = { workspace = true }
 uuid = { workspace = true, features = ["v4"] }
 xxhash-rust = { workspace = true }
 zeroize = { workspace = true }
